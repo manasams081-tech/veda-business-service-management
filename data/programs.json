@@ -1,0 +1,6 @@
+[
+  {"id": 1, "name": "Python Engineering Accelerator", "type": "Training", "duration": "8 Weeks", "coordinator": "Learning Team", "status": "Running", "seats": 30},
+  {"id": 2, "name": "Digital Internship Program", "type": "Internship", "duration": "12 Weeks", "coordinator": "Talent Team", "status": "Open", "seats": 50},
+  {"id": 3, "name": "Business Automation Bootcamp", "type": "Training", "duration": "4 Weeks", "coordinator": "Solutions Team", "status": "Planned", "seats": 25},
+  {"id": 4, "name": "Cloud Foundations", "type": "Technology Program", "duration": "6 Weeks", "coordinator": "Platform Team", "status": "Running", "seats": 40}
+]

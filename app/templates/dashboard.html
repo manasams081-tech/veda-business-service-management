@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}Overview{% endblock %}
+{% block section %}Executive Overview{% endblock %}
+{% block content %}
+<section class="hero">
+  <div>
+    <span class="eyebrow">CURRENT OPERATIONS · {{ year }}</span>
+    <h1>One workspace for every<br><em>business service.</em></h1>
+    <p>Manage technology services, programs, customers and service requests from one focused operations hub.</p>
+    <div class="hero-actions"><a class="btn primary" href="{{ url_for('inquiries') }}">Open request queue →</a><a class="btn ghost" href="{{ url_for('reports') }}">View reports</a></div>
+  </div>
+  <div class="hero-orbit"><div class="orbit-center">V<span>NEXUS</span></div><i></i><i></i><i></i></div>
+</section>
+
+<div class="kpi-grid">
+  <div class="kpi"><div class="kpi-icon orange">◆</div><div><small>ACTIVE SERVICES</small><strong>{{ stats.active_services }}<span>/{{ stats.services }}</span></strong></div><label>Service portfolio</label></div>
+  <div class="kpi"><div class="kpi-icon purple">▦</div><div><small>PROGRAMS</small><strong>{{ stats.programs }}</strong></div><label>Learning & delivery</label></div>
+  <div class="kpi"><div class="kpi-icon blue">◉</div><div><small>CUSTOMERS</small><strong>{{ stats.customers }}</strong></div><label>Relationship base</label></div>
+  <div class="kpi alert"><div class="kpi-icon red">!</div><div><small>OPEN WORK</small><strong>{{ stats.open_inquiries }}</strong></div><label>{{ stats.high_priority }} high-priority</label></div>
+</div>
+
+<div class="grid-2">
+  <section class="panel">
+    <div class="panel-head"><div><span class="eyebrow">LIVE QUEUE</span><h2>Recent inquiries</h2></div><a href="{{ url_for('inquiries') }}">View all →</a></div>
+    <div class="activity-list">
+      {% for item in recent %}
+      <div class="activity"><div class="avatar">{{ item.customer[0] }}</div><div class="activity-main"><b>{{ item.subject }}</b><span>{{ item.customer }} · {{ item.created }}</span></div><span class="status {{ item.status|lower|replace(' ', '-') }}">{{ item.status }}</span></div>
+      {% else %}<div class="empty">No inquiries yet.</div>{% endfor %}
+    </div>
+  </section>
+  <section class="panel highlight-panel">
+    <div class="panel-head"><div><span class="eyebrow">OPERATING MODEL</span><h2>Built for scale</h2></div><span class="badge">MAJOR PROJECT</span></div>
+    <div class="model-grid">
+      <div><strong>01</strong><span>Deliver</span><p>Services & digital capabilities</p></div>
+      <div><strong>02</strong><span>Develop</span><p>Training & internship programs</p></div>
+      <div><strong>03</strong><span>Support</span><p>Customers & requests</p></div>
+      <div><strong>04</strong><span>Decide</span><p>Reports & operational insight</p></div>
+    </div>
+  </section>
+</div>
+{% endblock %}

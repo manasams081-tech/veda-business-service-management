@@ -1,0 +1,7 @@
+[
+  {"id": 1, "customer": "Aster Retail Group", "subject": "Dashboard enhancement", "type": "Service Request", "priority": "High", "status": "In Progress", "assignee": "Data Team", "created": "2026-10-02"},
+  {"id": 2, "customer": "BluePeak Logistics", "subject": "Cloud migration consultation", "type": "Inquiry", "priority": "Medium", "status": "Open", "assignee": "Platform Team", "created": "2026-10-04"},
+  {"id": 3, "customer": "Nova Learning Hub", "subject": "Internship cohort registration", "type": "Program", "priority": "Low", "status": "Resolved", "assignee": "Talent Team", "created": "2026-09-29"},
+  {"id": 4, "customer": "Cedar Health Systems", "subject": "Security readiness review", "type": "Service Request", "priority": "High", "status": "Open", "assignee": "Security Team", "created": "2026-10-05"},
+  {"id": 5, "customer": "Orbit Media Labs", "subject": "Website modernization quote", "type": "Inquiry", "priority": "Medium", "status": "Open", "assignee": "Product Team", "created": "2026-10-06"}
+]

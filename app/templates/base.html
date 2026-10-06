@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Veda Nexus{% endblock %} · Business Operations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-mark">V</div>
+      <div><strong>VEDA</strong><span>NEXUS</span></div>
+    </div>
+    <div class="workspace-label">OPERATIONS WORKSPACE</div>
+    <nav>
+      <a class="nav-link {% if active_page == 'dashboard' %}active{% endif %}" href="{{ url_for('dashboard') }}"><span>⌂</span> Overview</a>
+      <a class="nav-link {% if active_page == 'services' %}active{% endif %}" href="{{ url_for('services') }}"><span>◆</span> Services</a>
+      <a class="nav-link {% if active_page == 'programs' %}active{% endif %}" href="{{ url_for('programs') }}"><span>▦</span> Programs</a>
+      <a class="nav-link {% if active_page == 'customers' %}active{% endif %}" href="{{ url_for('customers') }}"><span>◉</span> Customers</a>
+      <a class="nav-link {% if active_page == 'inquiries' %}active{% endif %}" href="{{ url_for('inquiries') }}"><span>✦</span> Inquiries</a>
+      <a class="nav-link {% if active_page == 'reports' %}active{% endif %}" href="{{ url_for('reports') }}"><span>▤</span> Reports</a>
+    </nav>
+    <div class="sidebar-foot">
+      <div class="mini-card"><span class="pulse"></span><div><b>System healthy</b><small>Local JSON storage</small></div></div>
+      <div class="version">V1.0 · Major Project</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+      <div class="crumb"><span>Veda Nexus</span><b>/</b><strong>{% block section %}Overview{% endblock %}</strong></div>
+      <div class="top-actions"><span class="live-dot"></span><span>Workspace online</span></div>
+    </header>
+
+    <div class="content">
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          <div class="flash-stack">
+          {% for category, message in messages %}<div class="flash {{ category }}">{{ message }} <button onclick="this.parentElement.remove()">×</button></div>{% endfor %}
+          </div>
+        {% endif %}
+      {% endwith %}
+      {% block content %}{% endblock %}
+    </div>
+    <footer>Veda Nexus · Synthetic operational data · Built with Python, JSON/CSV, Git & GitHub</footer>
+  </main>
+</div>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

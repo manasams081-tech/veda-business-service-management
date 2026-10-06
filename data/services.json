@@ -1,0 +1,7 @@
+[
+  {"id": 1, "name": "Cloud Operations", "category": "Digital Services", "owner": "Platform Team", "status": "Active", "priority": "High", "description": "Cloud setup, monitoring and operational support."},
+  {"id": 2, "name": "Data Analytics Studio", "category": "Digital Services", "owner": "Data Team", "status": "Active", "priority": "Medium", "description": "Business dashboards, analytics and reporting services."},
+  {"id": 3, "name": "Managed Cyber Support", "category": "Technology", "owner": "Security Team", "status": "Active", "priority": "High", "description": "Security reviews, awareness and incident readiness support."},
+  {"id": 4, "name": "Website Modernization", "category": "Technology", "owner": "Product Team", "status": "Planned", "priority": "Medium", "description": "Modern web experience planning and implementation."},
+  {"id": 5, "name": "Automation Advisory", "category": "Consulting", "owner": "Solutions Team", "status": "Active", "priority": "Low", "description": "Process automation and productivity improvement advisory."}
+]

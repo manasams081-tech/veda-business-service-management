@@ -1,0 +1,7 @@
+[
+  {"id": 1, "name": "Aster Retail Group", "email": "contact@aster.example", "phone": "+91 90000 10001", "segment": "Enterprise", "service": "Data Analytics Studio", "status": "Active"},
+  {"id": 2, "name": "Nova Learning Hub", "email": "hello@nova.example", "phone": "+91 90000 10002", "segment": "Education", "service": "Python Engineering Accelerator", "status": "Active"},
+  {"id": 3, "name": "BluePeak Logistics", "email": "ops@bluepeak.example", "phone": "+91 90000 10003", "segment": "SMB", "service": "Cloud Operations", "status": "Onboarding"},
+  {"id": 4, "name": "Cedar Health Systems", "email": "it@cedar.example", "phone": "+91 90000 10004", "segment": "Enterprise", "service": "Managed Cyber Support", "status": "Active"},
+  {"id": 5, "name": "Orbit Media Labs", "email": "team@orbit.example", "phone": "+91 90000 10005", "segment": "Startup", "service": "Website Modernization", "status": "Prospect"}
+]
